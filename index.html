@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tales of Brighteye | Luxury Wedding Photography & Films</title>
+
+<meta name="description"
+content="Tales of Brighteye — Luxury wedding photography and cinematic wedding films crafted around your story.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --black:#0b0a09;
+    --soft-black:#12100e;
+    --cream:#f4efe7;
+    --gold:#c8a96b;
+    --muted:#aaa39a;
+    --line:rgba(200,169,107,.28);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--black);
+    color:var(--cream);
+    font-family:'Montserrat',sans-serif;
+    font-weight:300;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:25px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.75),
+        transparent
+    );
+}
+
+.logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.nav-links a{
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    min-height:700px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.48),
+        rgba(0,0,0,.65)
+    ),
+    url("images/hero-wedding.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:900px;
+    padding:30px;
+}
+
+.eyebrow{
+    font-size:10px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(65px,9vw,140px);
+    line-height:.82;
+    font-weight:400;
+}
+
+.hero h1 span{
+    font-style:italic;
+    color:var(--gold);
+}
+
+.hero p{
+    max-width:600px;
+    margin:35px auto;
+    color:#ddd6cd;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 32px;
+    border:1px solid var(--gold);
+    color:var(--cream);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:10px;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:var(--gold);
+    color:var(--black);
+}
+
+/* SECTION */
+
+section{
+    padding:120px 7%;
+}
+
+.section-label{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:10px;
+    margin-bottom:18px;
+}
+
+.section-title{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:400;
+    font-size:clamp(48px,6vw,80px);
+    line-height:.95;
+}
+
+.section-title em{
+    color:var(--gold);
+}
+
+/* INTRO */
+
+.intro{
+    background:var(--cream);
+    color:var(--black);
+    text-align:center;
+}
+
+.intro-inner{
+    max-width:900px;
+    margin:auto;
+}
+
+.intro .section-label{
+    color:#917443;
+}
+
+.intro p{
+    margin:35px auto 0;
+    max-width:700px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    line-height:1.5;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+    background:var(--soft-black);
+}
+
+.portfolio-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:55px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:18px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    position:relative;
+}
+
+.gallery-item img{
+    height:100%;
+    object-fit:cover;
+    transition:transform 1s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.06);
+}
+
+.gallery-item:nth-child(1){
+    grid-column:span 7;
+    height:600px;
+}
+
+.gallery-item:nth-child(2){
+    grid-column:span 5;
+    height:600px;
+}
+
+.gallery-item:nth-child(3){
+    grid-column:span 4;
+    height:500px;
+}
+
+.gallery-item:nth-child(4){
+    grid-column:span 8;
+    height:500px;
+}
+
+/* SERVICES */
+
+.services{
+    background:var(--black);
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    margin-top:60px;
+}
+
+.service{
+    background:var(--black);
+    padding:55px 40px;
+    min-height:260px;
+}
+
+.service-number{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.service h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    font-weight:400;
+    margin:35px 0 15px;
+}
+
+.service p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.8;
+}
+
+/* PRICING */
+
+.pricing{
+    background:#0e0d0b;
+}
+
+.pricing-intro{
+    max-width:700px;
+    margin-top:30px;
+    color:var(--muted);
+    line-height:1.8;
+    font-size:13px;
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+    margin-top:65px;
+}
+
+.price-card{
+    border:1px solid rgba(200,169,107,.22);
+    padding:35px 25px;
+    min-height:540px;
+    display:flex;
+    flex-direction:column;
+    transition:.4s;
+    position:relative;
+}
+
+.price-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--gold);
+}
+
+.price-card.featured{
+    border-color:var(--gold);
+    background:linear-gradient(
+        150deg,
+        rgba(200,169,107,.12),
+        transparent
+    );
+}
+
+.badge{
+    position:absolute;
+    top:0;
+    right:0;
+    background:var(--gold);
+    color:var(--black);
+    padding:8px 12px;
+    font-size:8px;
+    letter-spacing:1px;
+}
+
+.price-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:35px;
+    font-weight:400;
+}
+
+.price-card .subtitle{
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin:10px 0 30px;
+    line-height:1.5;
+}
+
+.price{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    margin-bottom:30px;
+}
+
+.features{
+    list-style:none;
+    flex:1;
+}
+
+.features li{
+    border-bottom:1px solid rgba(255,255,255,.08);
+    padding:12px 0;
+    color:#bdb6ae;
+    font-size:11px;
+}
+
+.price-btn{
+    margin-top:30px;
+    text-align:center;
+    padding:13px;
+    border:1px solid rgba(200,169,107,.5);
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.price-btn:hover{
+    background:var(--gold);
+    color:var(--black);
+}
+
+/* EXPERIENCE */
+
+.experience{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.9),
+        rgba(0,0,0,.3)
+    ),
+    url("images/couple.jpg")
+    center/cover no-repeat;
+}
+
+.experience-content{
+    max-width:700px;
+}
+
+.experience p{
+    margin:30px 0;
+    color:#ddd;
+    line-height:1.9;
+    font-size:14px;
+}
+
+/* PROCESS */
+
+.process{
+    background:var(--cream);
+    color:var(--black);
+}
+
+.process .section-label{
+    color:#917443;
+}
+
+.process-grid{
+    margin-top:65px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+}
+
+.process-step{
+    border-top:1px solid #b6a887;
+    padding-top:20px;
+}
+
+.process-step span{
+    font-size:11px;
+    color:#917443;
+}
+
+.process-step h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    font-weight:400;
+    margin:25px 0 12px;
+}
+
+.process-step p{
+    font-size:11px;
+    line-height:1.8;
+    color:#666;
+}
+
+/* QUOTE */
+
+.quote{
+    text-align:center;
+    padding:160px 20px;
+}
+
+.quote blockquote{
+    max-width:1000px;
+    margin:auto;
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(42px,6vw,78px);
+    line-height:1;
+}
+
+.quote blockquote span{
+    color:var(--gold);
+    font-style:italic;
+}
+
+/* CONTACT */
+
+.contact{
+    background:var(--soft-black);
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:100px;
+    margin-top:60px;
+}
+
+.contact-info p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:2;
+    margin:25px 0;
+}
+
+.contact-details{
+    margin-top:40px;
+}
+
+.contact-details div{
+    margin-bottom:20px;
+}
+
+.contact-details small{
+    display:block;
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:9px;
+    margin-bottom:5px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea,
+select{
+    background:transparent;
+    border:none;
+    border-bottom:1px solid rgba(255,255,255,.2);
+    padding:16px 5px;
+    color:white;
+    font-family:'Montserrat',sans-serif;
+    font-size:11px;
+    outline:none;
+}
+
+select{
+    color:#aaa;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+form button{
+    margin-top:15px;
+    background:transparent;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding:35px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+footer p{
+    color:#777;
+    font-size:9px;
+    letter-spacing:1px;
+}
+
+.social{
+    display:flex;
+    gap:25px;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    z-index:999;
+    background:#f4efe7;
+    color:#111;
+    padding:14px 20px;
+    border-radius:30px;
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .pricing-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:60px;
+    }
+
+}
+
+@media(max-width:650px){
+
+    section{
+        padding:85px 6%;
+    }
+
+    .hero h1{
+        font-size:65px;
+    }
+
+    .gallery{
+        display:block;
+    }
+
+    .gallery-item,
+    .gallery-item:nth-child(n){
+        height:450px;
+        margin-bottom:15px;
+    }
+
+    .pricing-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:20px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">
+Tales <span>of</span> Brighteye
+</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#story">Our Story</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#collections">Collections</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Wedding Photography & Cinematography
+</div>
+
+<h1>
+Your Story.<br>
+<span>Our Frame.</span>
+</h1>
+
+<p>
+Luxury wedding photography and cinematic films created
+for couples who believe their wedding deserves more than
+memories — it deserves a story.
+</p>
+
+<a href="#collections" class="btn">
+Explore Collections
+</a>
+
+</div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro" id="story">
+
+<div class="intro-inner">
+
+<div class="section-label">
+Tales of Brighteye
+</div>
+
+<h2 class="section-title">
+We capture the moments<br>
+you <em>never want to forget.</em>
+</h2>
+
+<p>
+From the nervous smile before the ceremony to the
+tears in your father's eyes, from stolen glances to
+the madness on the dance floor — we preserve the
+moments that make your wedding uniquely yours.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+<div class="portfolio-heading">
+
+<div>
+<div class="section-label">Selected Stories</div>
+
+<h2 class="section-title">
+Love,<br>
+<em>beautifully framed.</em>
+</h2>
+</div>
+
+<a href="#" class="btn">
+View Full Portfolio
+</a>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="images/wedding-1.jpg" alt="Luxury wedding photography">
+</div>
+
+<div class="gallery-item">
+<img src="images/wedding-2.jpg" alt="Indian wedding photography">
+</div>
+
+<div class="gallery-item">
+<img src="images/wedding-3.jpg" alt="Wedding couple portrait">
+</div>
+
+<div class="gallery-item">
+<img src="images/wedding-4.jpg" alt="Cinematic wedding photography">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services">
+
+<div class="section-label">
+What We Create
+</div>
+
+<h2 class="section-title">
+More than photographs.<br>
+<em>An experience.</em>
+</h2>
+
+
+<div class="services-grid">
+
+<div class="service">
+<div class="service-number">01</div>
+<h3>Candid Photography</h3>
+<p>
+Unscripted emotions, quiet glances, laughter,
+tears and every little moment that happens
+between the big moments.
+</p>
+</div>
+
+
+<div class="service">
+<div class="service-number">02</div>
+<h3>Cinematic Films</h3>
+<p>
+Wedding films crafted with storytelling,
+music, movement and emotion — made to
+feel like your own personal movie.
+</p>
+</div>
+
+
+<div class="service">
+<div class="service-number">03</div>
+<h3>Editorial Portraits</h3>
+<p>
+Elegant portraits with a timeless editorial
+aesthetic, created to make you feel like
+the protagonists of your own story.
+</p>
+</div>
+
+
+<div class="service">
+<div class="service-number">04</div>
+<h3>Pre-Wedding Stories</h3>
+<p>
+A visual chapter before the wedding —
+personal, cinematic and completely yours.
+</p>
+</div>
+
+
+<div class="service">
+<div class="service-number">05</div>
+<h3>Drone Films</h3>
+<p>
+Aerial perspectives that reveal the scale,
+beauty and atmosphere of your celebration.
+</p>
+</div>
+
+
+<div class="service">
+<div class="service-number">06</div>
+<h3>Wedding Albums</h3>
+<p>
+Beautifully designed heirlooms created
+to live beyond your generation.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section class="pricing" id="collections">
+
+<div class="section-label">
+Wedding Collections
+</div>
+
+<h2 class="section-title">
+Choose your<br>
+<em>experience.</em>
+</h2>
+
+<p class="pricing-intro">
+Every celebration is different. Choose a collection
+that reflects the scale and personality of your wedding.
+Every package can also be customized.
+</p>
+
+
+<div class="pricing-grid">
+
+
+<!-- BASIC -->
+
+<div class="price-card">
+
+<h3>Basic</h3>
+
+<div class="subtitle">
+Beautifully essential
+</div>
+
+<div class="price">
+₹ XX,XXX
+</div>
+
+<ul class="features">
+<li>1 Photographer</li>
+<li>Traditional Photography</li>
+<li>Candid Photography</li>
+<li>Up to 6 Hours Coverage</li>
+<li>Professionally Edited Images</li>
+<li>Online Gallery</li>
+</ul>
+
+<a href="#contact" class="price-btn">
+Enquire
+</a>
+
+</div>
+
+
+<!-- PREMIUM -->
+
+<div class="price-card">
+
+<h3>Premium</h3>
+
+<div class="subtitle">
+The complete story
+</div>
+
+<div class="price">
+₹ XX,XXX
+</div>
+
+<ul class="features">
+<li>2 Photographers</li>
+<li>1 Cinematographer</li>
+<li>Full-Day Coverage</li>
+<li>Candid + Traditional</li>
+<li>Highlight Wedding Film</li>
+<li>Drone Coverage</li>
+<li>Online Gallery</li>
+</ul>
+
+<a href="#contact" class="price-btn">
+Enquire
+</a>
+
+</div>
+
+
+<!-- ELITE -->
+
+<div class="price-card featured">
+
+<div class="badge">
+SIGNATURE
+</div>
+
+<h3>Elite</h3>
+
+<div class="subtitle">
+The cinematic experience
+</div>
+
+<div class="price">
+₹ XX,XXX
+</div>
+
+<ul class="features">
+<li>2 Candid Photographers</li>
+<li>2 Cinematographers</li>
+<li>Multi-Day Coverage</li>
+<li>Pre-Wedding Shoot</li>
+<li>Cinematic Wedding Film</li>
+<li>4K Highlight Film</li>
+<li>Drone Cinematography</li>
+<li>Same-Day Teaser</li>
+<li>Premium Album</li>
+</ul>
+
+<a href="#contact" class="price-btn">
+Choose Elite
+</a>
+
+</div>
+
+
+<!-- INTIMATE -->
+
+<div class="price-card">
+
+<h3>Intimate</h3>
+
+<div class="subtitle">
+Small celebrations. Deep emotions.
+</div>
+
+<div class="price">
+₹ XX,XXX
+</div>
+
+<ul class="features">
+<li>1 Photographer</li>
+<li>1 Cinematographer</li>
+<li>4–6 Hours Coverage</li>
+<li>Candid Photography</li>
+<li>Short Cinematic Film</li>
+<li>Highlight Reel</li>
+<li>Online Gallery</li>
+</ul>
+
+<a href="#contact" class="price-btn">
+Enquire
+</a>
+
+</div>
+
+
+<!-- BIG FAT WEDDING -->
+
+<div class="price-card">
+
+<h3>Big Fat Wedding</h3>
+
+<div class="subtitle">
+For celebrations without limits
+</div>
+
+<div class="price">
+Custom
+</div>
+
+<ul class="features">
+<li>Multi-Day Coverage</li>
+<li>Multiple Photographers</li>
+<li>Multiple Cinematographers</li>
+<li>Pre-Wedding Shoot</li>
+<li>Luxury Wedding Film</li>
+<li>Drone Cinematography</li>
+<li>Same-Day Edit</li>
+<li>Premium Albums</li>
+<li>Dedicated Production Team</li>
+</ul>
+
+<a href="#contact" class="price-btn">
+Build Your Story
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience">
+
+<div class="experience-content">
+
+<div class="section-label">
+Our Philosophy
+</div>
+
+<h2 class="section-title">
+You live it.<br>
+<em>We preserve it.</em>
+</h2>
+
+<p>
+We believe the best wedding photographs aren't created
+when everyone is looking at the camera. They're created
+when you forget the camera exists.
+</p>
+
+<p>
+Our approach is documentary at heart, cinematic in
+execution and deeply personal to every couple we work with.
+</p>
+
+<a href="#contact" class="btn">
+Tell Us Your Story
+</a>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process">
+
+<div class="section-label">
+The Experience
+</div>
+
+<h2 class="section-title">
+From your first call<br>
+to your <em>forever.</em>
+</h2>
+
+
+<div class="process-grid">
+
+<div class="process-step">
+<span>01 — CONNECT</span>
+<h3>Let's Talk</h3>
+<p>
+Tell us about your wedding, your vision,
+your people and everything that matters to you.
+</p>
+</div>
+
+
+<div class="process-step">
+<span>02 — PLAN</span>
+<h3>Your Story</h3>
+<p>
+We understand your timeline and create
+a photography plan around your celebration.
+</p>
+</div>
+
+
+<div class="process-step">
+<span>03 — CREATE</span>
+<h3>The Wedding</h3>
+<p>
+You celebrate. You laugh. You cry.
+We'll be there to capture it all.
+</p>
+</div>
+
+
+<div class="process-step">
+<span>04 — RELIVE</span>
+<h3>Forever</h3>
+<p>
+Your photographs and films become the
+story you'll return to for years to come.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+<blockquote>
+“Your wedding happens once.<br>
+<span>Your story lives forever.</span>”
+</blockquote>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="section-label">
+Let's Create Something Beautiful
+</div>
+
+<h2 class="section-title">
+Tell us about<br>
+<em>your wedding.</em>
+</h2>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<p>
+Planning your wedding?
+We'd love to hear about it.
+Tell us a little about your celebration
+and we'll get back to you with our
+availability and collections.
+</p>
+
+
+<div class="contact-details">
+
+<div>
+<small>WhatsApp</small>
++91 XXXXX XXXXX
+</div>
+
+<div>
+<small>Email</small>
+hello@talesofbrighteye.com
+</div>
+
+<div>
+<small>Instagram</small>
+@talesofbrighteye
+</div>
+
+<div>
+<small>Based In</small>
+Karnataka · India · Worldwide
+</div>
+
+</div>
+
+</div>
+
+
+<form>
+
+<input
+type="text"
+placeholder="Your Name"
+required
+>
+
+<input
+type="email"
+placeholder="Email Address"
+required
+>
+
+<input
+type="tel"
+placeholder="Phone / WhatsApp"
+>
+
+<select>
+<option>Select Wedding Collection</option>
+<option>Basic</option>
+<option>Premium</option>
+<option>Elite</option>
+<option>Intimate Wedding</option>
+<option>Big Fat Wedding</option>
+</select>
+
+<input
+type="text"
+placeholder="Wedding Date"
+>
+
+<input
+type="text"
+placeholder="Wedding Location"
+>
+
+<textarea
+placeholder="Tell us about your wedding..."
+></textarea>
+
+<button class="btn" type="submit">
+Send Enquiry
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 TALES OF BRIGHTEYE. ALL RIGHTS RESERVED.
+</p>
+
+<div class="social">
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+<a href="#">WhatsApp</a>
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/91XXXXXXXXXX"
+target="_blank"
+>
+WhatsApp Us
+</a>
+
+
+</body>
+</html>
