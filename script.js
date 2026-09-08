@@ -48,4 +48,4 @@ showSlide(index);
 // Automatic sliding
 setInterval(() => {
 showSlide(currentIndex + 1);
-}, 3000);
+}, 60);
