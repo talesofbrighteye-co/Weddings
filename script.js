@@ -1,51 +1,58 @@
-const slides = document.querySelector(".slides");
-const slide = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
 
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector("nav");
+  const toggle = document.querySelector(".nav-toggle");
+  const links = document.querySelector(".nav-links");
 
-// Show selected slide
-function showSlide(index) {
+  window.addEventListener("scroll", () => {
+    if (nav) nav.classList.toggle("scrolled", window.scrollY > 40);
+  }, {passive:true});
 
-if (index >= slide.length) {
-currentIndex = 0;
-}
-else if (index < 0) {
-currentIndex = slide.length - 1;
-}
-else {
-currentIndex = index;
-}
+  if (toggle && links) {
+    toggle.addEventListener("click", () => links.classList.toggle("open"));
+    links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => links.classList.remove("open")));
+  }
 
-slides.style.transform =
-translateX(-${currentIndex * 100}%);
+  const slides = [...document.querySelectorAll(".hero-slide")];
+  const progress = document.querySelector(".hero-progress span");
+  if (slides.length) {
+    let index = 0;
+    const interval = 6000;
+    const showSlide = next => {
+      slides[index].classList.remove("active");
+      index = (next + slides.length) % slides.length;
+      slides[index].classList.add("active");
+      if (progress) {
+        progress.style.animation = "none";
+        void progress.offsetWidth;
+        progress.style.animation = `progress ${interval}ms linear`;
+      }
+    };
+    showSlide(0);
+    let timer = setInterval(() => showSlide(index + 1), interval);
+    document.addEventListener("visibilitychange", () => {
+      clearInterval(timer);
+      if (!document.hidden) timer = setInterval(() => showSlide(index + 1), interval);
+    });
+  }
 
-// Update dots
-dots.forEach(dot => {
-dot.classList.remove("active");
+  const form = document.querySelector("#enquiry-form");
+  if (form) {
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const d = new FormData(form);
+      const message = [
+        "Hi Tales of Brighteye,",
+        "",
+        `Name: ${d.get("name") || ""}`,
+        `Email: ${d.get("email") || ""}`,
+        `Phone: ${d.get("phone") || ""}`,
+        `Collection: ${d.get("collection") || ""}`,
+        `Wedding Date: ${d.get("date") || ""}`,
+        `Location: ${d.get("location") || ""}`,
+        `Message: ${d.get("message") || ""}`
+      ].join("\n");
+      window.open("https://wa.me/917619586265?text=" + encodeURIComponent(message), "_blank");
+    });
+  }
 });
-
-dots[currentIndex].classList.add("active");
-}
-
-// Next button
-document.querySelector(".next").addEventListener("click", () => {
-showSlide(currentIndex + 1);
-});
-
-// Previous button
-document.querySelector(".prev").addEventListener("click", () => {
-showSlide(currentIndex - 1);
-});
-
-// Dot navigation
-dots.forEach((dot, index) => {
-dot.addEventListener("click", () => {
-showSlide(index);
-});
-});
-
-// Automatic sliding
-setInterval(() => {
-showSlide(currentIndex + 1);
-}, 3000);
