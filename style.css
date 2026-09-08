@@ -102,7 +102,12 @@ nav{
 }
 
 .hero-content{
-    position: absolute;
+    max-width:900px;
+    padding:30px;
+}
+
+.eyebrow{
+       position: absolute;
 inset: 0;
 
 z-index: 3;
@@ -118,11 +123,6 @@ text-align: center;
 padding: 30px;
 
 color: white;
-    max-width:900px;
-    padding:30px;
-}
-
-.eyebrow{
     font-size:10px;
     letter-spacing:5px;
     text-transform:uppercase;
